@@ -1,5 +1,8 @@
 # signals.py
+<<<<<<< HEAD
+=======
 
+>>>>>>> 350f9ad34db95c79f8eae526011254450f6b977c
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver

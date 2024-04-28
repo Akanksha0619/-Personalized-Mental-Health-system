@@ -62,6 +62,7 @@ def logout_user(request):
     messages.info(request, "You have successfully logged out.")
     return redirect('login')
 
+<<<<<<< HEAD
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
@@ -101,3 +102,13 @@ def edit_profile(request):
     else:
         form = ProfileForm(instance=request.user.profile)
     return render(request, 'edit_profile.html', {'form': form})
+=======
+
+# views.py
+from django.shortcuts import render
+from .models import Profile
+
+def profile_view(request):
+    profile = Profile.objects.get(user=request.user)
+    return render(request, 'profile.html', {'profile': profile})
+>>>>>>> 967c7b562581d0740427a4c0ebeb0e57d51fd579

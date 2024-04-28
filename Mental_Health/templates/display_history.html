@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search History</title>
+</head>
+<body>
+    <h1>Search History</h1>
+    {% if search_history %}
+        <ul>
+            {% for entry in search_history %}
+                <li>
+                    <strong>User:</strong> {{ entry.user.username }}
+                    <br>
+                    <strong>Search Statement:</strong> {{ entry.search_statement }}
+                    <br>
+                    <strong>Search Result:</strong> {{ entry.search_result }}
+                    <br>
+                    <strong>Search Date:</strong> {{ entry.search_date }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No search history available.</p>
+    {% endif %}
+</body>
+</html>

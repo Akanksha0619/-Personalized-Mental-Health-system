@@ -1,0 +1,26 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E265" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="myproject.myapp.models.myapp" />
+          <option value="myproject.myproject.urls.myapp" />
+          <option value="myproject.myproject.urls.home" />
+          <option value="myproject.myproject.urls.about" />
+          <option value="office_project.office_app.urls.*" />
+          <option value="myproject.myproject.urls.index" />
+          <option value="myblog.blog.views.admin.site" />
+          <option value="job_buddy.myapp.views.Profile" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

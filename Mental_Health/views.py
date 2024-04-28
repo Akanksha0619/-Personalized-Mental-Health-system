@@ -40,3 +40,12 @@ def logout_user(request):
     logout(request)
     messages.info(request, "You have successfully logged out.")
     return redirect('login')
+
+
+# views.py
+from django.shortcuts import render
+from .models import Profile
+
+def profile_view(request):
+    profile = Profile.objects.get(user=request.user)
+    return render(request, 'profile.html', {'profile': profile})

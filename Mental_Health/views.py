@@ -5,6 +5,10 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .forms import  CreateUserForm
+from django.contrib.auth.decorators import login_required
+from .models import Profile
+
+
 
 def home(request):
     return render(request, 'home.html')
@@ -35,6 +39,14 @@ def login_user(request):
             return redirect('login')
 
     return render(request, 'login_page.html')
+
+
+
+
+@login_required
+def profile_view(request):
+    profile = request.user.profile
+    return render(request, 'profile.html', {'profile': profile})
 
 def logout_user(request):
     logout(request)

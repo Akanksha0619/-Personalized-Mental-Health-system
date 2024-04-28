@@ -1,10 +1,12 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from .forms import  CreateUserForm
+from .forms import  CreateUserForm,ProfileForm
+from .models import *
+
+
 
 def home(request):
     return render(request, 'home.html')
@@ -36,7 +38,77 @@ def login_user(request):
 
     return render(request, 'login_page.html')
 
+
+
+
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
+from .models import Profile
+
+@login_required
+def profile_view(request):
+    # Retrieve the profile associated with the authenticated user
+    try:
+        profile = request.user.profile
+    except Profile.DoesNotExist:
+        # If profile does not exist, create a new one
+        profile = Profile.objects.create(user=request.user, email=request.user.email)
+
+    # Pass the profile instance to the template context
+    return render(request, 'profile_view.html', {'profile': profile})
+
 def logout_user(request):
     logout(request)
     messages.info(request, "You have successfully logged out.")
     return redirect('login')
+
+<<<<<<< HEAD
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .models import Contact
+
+def contact_form(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        message = request.POST.get('message', '')
+
+        # Perform form validation
+        if not name or not email or not message:
+            messages.error(request, 'Please fill out all fields.')
+        else:
+            # Save the contact message to the database
+            Contact.objects.create(
+                name=name,
+                email=email,
+                message=message
+            )
+
+            # Redirect to the home page with success parameter
+            return redirect('home')
+
+    return render(request, 'contact_form.html')
+
+@login_required
+def edit_profile(request):
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, instance=request.user.profile)
+        if form.is_valid():
+            form.save()
+            return redirect('profile_view')  # Redirect to profile page after saving
+    else:
+        form = ProfileForm(instance=request.user.profile)
+    return render(request, 'edit_profile.html', {'form': form})
+=======
+
+# views.py
+from django.shortcuts import render
+from .models import Profile
+
+def profile_view(request):
+    profile = Profile.objects.get(user=request.user)
+    return render(request, 'profile.html', {'profile': profile})
+>>>>>>> 967c7b562581d0740427a4c0ebeb0e57d51fd579

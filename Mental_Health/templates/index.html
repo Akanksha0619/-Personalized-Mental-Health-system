@@ -112,11 +112,19 @@
 }
 
 @keyframes typing {
+<<<<<<< HEAD
     from {
       width: 0;
     }
     to
      {
+=======
+    from { 
+      width: 0; 
+    }
+    to
+     { 
+>>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
       width:100%;
     }
 
@@ -126,6 +134,7 @@
      width: 100%;
      position:fixed;
 }
+<<<<<<< HEAD
 #search-contant{
   overflow-y: auto;
 }
@@ -137,6 +146,8 @@
     margin-left:450px;
     border-radius:10px;
 }
+=======
+>>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
 </style>
   <body onload="callAfterTenSeconds()">
     <div class="container-fluid" style="background-color:rgb(255, 255, 255);">
@@ -156,10 +167,17 @@
                   <a  class="nav-link" href="#Ai-chat" style="color: rgb(0, 0, 0); font-size: 20px;margin-left:30px;">Ai-chat</a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                   <a class="nav-link" href="#contact" style="color: rgb(0, 0, 0);font-size: 20px;margin-left: 30px;">Contact us</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#footer" style="color: rgb(0, 0, 0);font-size: 20px;margin-left: 30px;">About</a>
+=======
+                  <a class="nav-link" href="#footer" style="color: rgb(0, 0, 0);font-size: 20px;margin-left: 30px;">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact" style="color: rgb(0, 0, 0);font-size: 20px;margin-left: 30px;">Contact us</a>
+>>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#homepage"><button style="font-size:20px;color: rgb(0, 0, 0); margin-left:40px;background-color: transparent;border: transparent;" onclick="signdown()" id="loginbutton">Login</button></a>
@@ -182,7 +200,11 @@
           </div>
 
           <img src="download.png" style="margin-top: 200px;margin-left:1050px;height: 500px;"/>
+<<<<<<< HEAD
           <div class="container" id="login" style="height: 400px;width:500px;border: 2px solid whitesmoke;border-radius: 20px;margin-left:35%;position: absolute;">
+=======
+          <div class="container" id="login" style="height: 400px;width:500px;border: 1px solid whitesmoke;border-radius: 20px;margin-left:35%;position: absolute;">
+>>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
             <button type="button" id="closefixed" onclick="closesign()" style="margin-left: 440px;border: transparent;background-color: transparent;border-radius: 10px;"><img src="images.png" style="height: 20px;width: 25px;border-radius: 40px;"/> </button>
             <span style="color: rgb(255, 255, 255);font-size: 30px;margin-left: 200px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;border: transparent;">Login</span>
             <form action="" method="post" onsubmit="return submitform()">
@@ -201,8 +223,13 @@
               <br/>
             </form>
             <span style="margin-left: 130px;margin-top:0px;color: whitesmoke;">Dont have an account ?<button onclick="signUppage()" style="background: transparent;border: transparent;color: rgb(255, 255, 255);">signUp</button></span>
+<<<<<<< HEAD
           </div>
            <div class="container" id="signup" style="height: 500px;width:500px;border: 2px solid whitesmoke;border-radius: 20px;position: absolute;background-color: rgb(0, 8, 67)">
+=======
+          </div> 
+           <div class="container" id="signup" style="height: 500px;width:500px;border: 1px solid whitesmoke;border-radius: 20px;position: absolute;background-color: rgb(0, 8, 67)">
+>>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
             <button type="button" id="closefixedsign"  onclick="closesign2()" style="margin-left: 440px;border: transparent;background-color: transparent;border-radius: 10px;"><img src="images.png" style="height: 20px;width: 25px;border-radius: 40px;"/> </button>
             <form action="" method="post"  onsubmit="return signform()">
               <h2 style="color: white;margin-left: 200px;margin-top: 10px;">Sign Up</h2>
@@ -233,6 +260,7 @@
           </form>
           <span style="margin-left: 130px;margin-top:0px;color: whitesmoke;">Do have an account ?<button onclick="signdown()" style="background: transparent;border: transparent;color: rgb(255, 255, 255);">Login</button></span>
            </div>
+<<<<<<< HEAD
         </div>
         <div class="Ai-Chat" id="Ai-chat">
             <h1 style="margin-top:100px;color:white">AI chat</h1>
@@ -271,6 +299,22 @@
 
             </form>
           </div>
+=======
+        </div> 
+        <div class="Ai-Chat" id="Ai-chat">
+            <h1 style="margin-top:100px;color:white">AI chat</h1>
+            <div class="startchatbox" style="border: 1px solid whitesmoke;">
+                <div class="searchboxAi">
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="" aria-label="Search" style="width: 800px;height:50px;margin-top: 7px;border-radius: 50px;color: white;background-color: transparent;border: 2px solid whitesmoke;margin-left: 5px;">
+                    <button class="btn btn-outline-success" type="submit" style="width: 100px;height:50px;margin-left: 10px;margin-top: 10px;color: whitesmoke;background-color: rgb(181, 21, 181);border: 1px solid rgb(0, 0, 0);border-radius: 50px;">Search</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+        <div class="about" id="contact" style="background-color: rgb(13, 108, 111);">
+          <h1 style="margin-top: 100px;text-align: center;">Contact us</h1>
+>>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
         </div>
         <div class="footer" id="footer">
           <footer class="section1">
@@ -281,7 +325,11 @@
               <span style="color: whitesmoke;margin-left:8px;">Aakansha Marathe</span><br/>
               <span style="color: whitesmoke;margin-left:8px;">Muskan Rathore</span><br/>
               <span style="color: whitesmoke;margin-left:8px;">Prashant chohan</span><br/>
+<<<<<<< HEAD
              <div class="follow">
+=======
+             <div class="follow"> 
+>>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
                  <img src="" />
                  <img src="" />
                  <img src=""/>
@@ -300,7 +348,11 @@
             <h3 style="color: whitesmoke;margin-top: -7px;margin-left: -40px;">About</h3>
              <span style="color: whitesmoke;margin-left: -35px;">Lorem ipsum dolor, sit amet consectetur</span>
              <span style="color: whitesmoke;margin-left:px;">Lorem ipsum dolor, sit amet consectetur</span>
+<<<<<<< HEAD
 
+=======
+             
+>>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
           </footer>
           <footer class="section4">
               <h3 style="color: whitesmoke;margin-top: -7px;">contact us</h3>
@@ -392,7 +444,7 @@
             return true;
            }
           }
-
+           
           document.addEventListener('DOMContentLoaded', function() {
     const taglines = [
         "Your first tagline here",
@@ -400,6 +452,16 @@
         "Your third tagline here"
     ];
 
+<<<<<<< HEAD
+          document.addEventListener('DOMContentLoaded', function() {
+    const taglines = [
+        "Your first tagline here",
+        "Your second tagline here",
+        "Your third tagline here"
+    ];
+
+=======
+>>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
     const typingElement = document.getElementById('typing-animation');
 
     function typeTaglines() {
@@ -422,7 +484,11 @@
     }
     typeTaglines();
 });
+<<<<<<< HEAD
 
+=======
+         
+>>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
       let loginbtn = document.getElementById("loginbutton");
       loginbtn.addEventListener('click',function(){
        document.body.classList.add('open');
@@ -440,7 +506,11 @@
         var down = document.getElementById("login");
         down.style.top = "20%";
         document.body.classList.add('open');
+<<<<<<< HEAD
 
+=======
+       
+>>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
     }, 10000); // 10000 milliseconds = 10 seconds
 }
         </script>

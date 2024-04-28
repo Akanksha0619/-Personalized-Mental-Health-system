@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+   <style>
+      body{
+        margin: 0px;
+        padding: 0px;
+        scroll-behavior: smooth;
+      }
+     .container{
+      width: 600px;
+     }
+     #login{
+          top:-100%;
+          background-color:rgb(0, 8, 67);
+     }
+     .nav-link{
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+     }
+     .nav-link:hover{
+         border-bottom:1px solid rgb(0, 0, 0);
+     }
+     .chatbote{
+       height: 400px;
+       width: 600px;
+       border: 1px solid white;
+       margin-left:400px;
+       border-radius: 20px;
+       margin-top: 100px;
+       position: absolute;
+     }
+     #signup{
+      margin-top:5%;
+      margin-left: -85%;
+     }
+     .about{
+         height: 730px;
+         width: 1530px;
+         border: 1px solid black;
+     }
+   </style>
+  <body>
+    <div class="container-fluid" style="background-color:rgb(255, 255, 255);" >
+      <nav class="navbar navbar-expand-lg" style="height: 80px; background-color:rgb(255, 255, 255);">
+          <div class="container-fluid">
+            <img src="gradient-mental-health-logo-template_23-2148820570.avif" height="90px" width="100px" style="mix-blend-mode:darken;margin-top:-15px;"/>
+            <a class="navbar-brand" href="#" style="color: rgb(0, 0, 0);font-size:30px;margin-left: 30px;">AI Assistance</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: 1px solid whitesmoke;">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" id="responsivnav" href="#" style="color: rgb(0, 0, 0);font-size: 20px;margin-left: 600px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a  class="nav-link" href="#about" style="color: rgb(0, 0, 0); font-size: 20px;margin-left:30px;">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: rgb(0, 0, 0);font-size: 20px;margin-left: 30px;">AI chat</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style="color: rgb(0, 0, 0);font-size: 20px;margin-left: 30px;">Contact us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"><button style="font-size:20px;color: rgb(0, 0, 0); margin-left:40px;background-color: transparent;border: transparent;" onclick="signdown()">Login</button></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+        <div class="container-fluid" id="homepage" style="background-color: rgb(3, 3, 75);height: 650px;position: relative;">
+          
+          <div class="container" id="login" style="height: 400px;width:500px;border: 1px solid whitesmoke;border-radius: 20px;margin-left:35%;position: absolute;">
+            <button type="button"  onclick="closesign()" style="margin-left: 450px;border: transparent;background-color: transparent;border-radius: 10px;"><img src="images.png" style="height: 20px;width: 25px;border-radius: 40px;"/> </button>
+            <span style="color: rgb(255, 255, 255);font-size: 30px;margin-left: 200px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;border: transparent;">Login</span>
+            <form action="" method="post" onsubmit="return submitform()">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" style="color: whitesmoke;margin-top: 40px;">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email..">
+                <span style="color: rgb(255, 0, 0);" id="coremail"></span>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label" style="color: whitesmoke;">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password..">
+                <spa style="color: rgb(255, 0, 0);" id="corpassword"></span>
+              </div>
+              <button type="submit" class="btn btn-primary" style="margin-left: 200px; margin-top: 10px;">Submit</button>
+              <br/>
+              <br/>
+            </form>    
+            <span style="margin-left: 130px;margin-top:0px;color: whitesmoke;">Dont have an account ?<button onclick="signUppage()" style="background: transparent;border: transparent;color: rgb(255, 255, 255);">signUp</button></span>
+          </div> 
+          
+           <div class="container" id="signup" style="height: 500px;width:500px;border: 1px solid whitesmoke;border-radius: 20px;position: absolute;background-color: rgb(0, 8, 67)">
+            <button type="button"  onclick="closesign2()" style="margin-left: 450px;border: transparent;background-color: transparent;border-radius: 10px;"><img src="images.png" style="height: 20px;width: 25px;border-radius: 40px;"/> </button>
+            <form action="" method="post"  onsubmit="return signform()">
+              <h2 style="color: white;margin-left: 200px;margin-top: 10px;">Sign Up</h2>
+              <div>
+              <label for="email" style="color: white;margin-top: 10px;">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter Email..">
+              <span style="color: rgb(255, 0, 0);" id="cemail"></span>
+            </div>
+            <div>
+              <label for="number" style="color: white;margin-top: 20px;">Phone Number:</label>
+              <input type="text" id="number" name="number" class="form-control"  aria-describedby="emailHelp" placeholder="Enter Number..">
+             <span style="color: rgb(255, 0, 0);" id="cnumber"></span>
+
+            </div>       
+          <div>
+            <label for="password" style="color: white;margin-top: 20px;">Password:</label>
+            <input type="password" id="password" name="password" class="form-control"  aria-describedby="emailHelp" placeholder="Enter password..">
+            <span style="color: rgb(255, 0, 0);" id="cpassword"></span>
+          </div>
+          <div>
+            <label for="confirm_password" style="color: white;margin-top: 20px;">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter Confirm password..">
+           <span style="color: rgb(255, 0, 0);" id="confirmpassword"></span>
+          </div> 
+            <div>
+              <button type="submit" class="btn btn-primary" style="margin-left: 200px; margin-top: 10px;" onclick="signform()">Submit</button>
+            </div>
+          </form>
+          <span style="margin-left: 130px;margin-top:0px;color: whitesmoke;">Do have an account ?<button onclick="signdown()" style="background: transparent;border: transparent;color: rgb(255, 255, 255);">Login</button></span>
+           </div>
+        </div> 
+        <div class="about" id="about">
+           <h1 style="text-align:center;">About</h1>
+        </div>
+        <script>
+           function closesign(){
+                var close = document.getElementById("login");
+                close.style.top = "-100%"; 
+                var opty = document.getElementById("homepage");
+                opty.style.opacity = "100%";
+           }
+           function closesign2(){
+            var close = document.getElementById("signup");
+                close.style.left = "-35%"; 
+           }
+           function signdown(){
+                closesign2();
+                var down = document.getElementById("login");
+                down.style.top = "10%";
+
+           }
+           function signUppage(){
+            var down = document.getElementById("signup");
+              down.style.left = "120%";
+              closesign();
+           } 
+           function submitform(){
+            var email = document.getElementById("exampleInputEmail1");
+           var password = document.getElementById("exampleInputPassword1");
+           if(email.value.length ==  " "){
+                document.getElementById("coremail").innerText = "Enter correct email";
+                return false;
+           }
+           else if(password.value.length < 4){
+                 if(password.value.length == "0"){
+                  document.getElementById("corpassword").innerText = "please enter pasword";
+                  return false;
+                 }
+                 else{
+                  document.getElementById("corpassword").innerText = "please enter pasword above 5 character";
+                  return false;
+                 }
+           }
+           else{
+            return true;
+           }
+           }
+           function signform(){
+           var semail = document.getElementById("email");
+           var snumber = document.getElementById("number");
+           var spassword = document.getElementById("password");
+           var scpassword = document.getElementById("confirm_password");
+           if(semail.value.length ==  " "){
+                document.getElementById("cemail").innerText = "Enter  email";
+                return false;
+           }
+           if(semail.value.length < 15){
+                 document.getElementById("cemail").innerText = "Enter correct  email";
+                return false;
+           }
+            if(snumber.value.length < 10){
+               document.getElementById("cnumber").innerText = "Enter Valid number";
+                return false;
+           }
+           if(spassword.value.length < 5){
+                 if(spassword.value.length == 0){
+                  document.getElementById("cpassword").innerText = "please enter pasword";
+                  return false;
+                 }
+                 else if(spassword.value.length < 5){
+                  document.getElementById("cpassword").innerText = "please enter pasword with 5 character";
+                  return false;
+                 }
+           else{
+            return true;
+           }
+           }
+           if(spassword.value.length != scpassword.value.length){
+                  document.getElementById("confirmpassword").innerText = "pasword is not matched";
+                  return false;
+           }
+           else if(spassword.value.length == scpassword.value.length){
+            return true;
+           }
+          
+          }
+
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+  </body>
+</html>

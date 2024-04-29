@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+     Page
+{% endblock %}
+
+    {% block style %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            color: #555;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <h1>Search History</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Search Statement</th>
+                <th>Search Result</th>
+                <th>Search Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in search_history %}
+            <tr>
+                <td>{{ entry.user.username }}</td>
+                <td>{{ entry.search_statement }}</td>
+                <td>{{ entry.search_result }}</td>
+                <td>{{ entry.search_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

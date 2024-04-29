@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Add your head content here -->
-</head>
-<body>
-    <!-- Add your body content here -->
+{% extends 'base.html' %}
+{% load static %}
 
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block style %}
+
+
+{% endblock %}
+{% block content %}
     {% if message %}
     <script>
         // Display popup message
         alert('Thank you! Your message has been submitted.');
     </script>
     {% endif %}
-</body>
-</html>
+{% endblock %}

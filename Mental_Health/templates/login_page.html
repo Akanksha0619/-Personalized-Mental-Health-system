@@ -5,7 +5,7 @@
     Login Page
 {% endblock %}
 
-{% block additional_styles %}
+    {% block style %}
 <style>
     .main-container {
         width: 30%;
@@ -34,7 +34,7 @@
     .signup-button {
         width: 100%;
         padding: .5em;
-        background-color: #4CAF50; /* Green background color for the button */
+        background-color: #61c0bf; /* Green background color for the button */
         border: none;
         border-radius: 5px;
         font-size: 1em;
@@ -80,7 +80,7 @@
         <div class="user-content-container user-profile-form-container">
             <form action="{% url 'login' %}" method="POST">
                 {% csrf_token %}
-                <ul>
+                <ul style="list-style:none">
                     <li class="name">
                         <label for="username">Username</label>
                         <input type="text" name="username" id="username" class="username-input" placeholder="Username">

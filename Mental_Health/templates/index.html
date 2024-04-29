@@ -112,19 +112,11 @@
 }
 
 @keyframes typing {
-<<<<<<< HEAD
     from {
       width: 0;
     }
     to
      {
-=======
-    from { 
-      width: 0; 
-    }
-    to
-     { 
->>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
       width:100%;
     }
 
@@ -134,7 +126,6 @@
      width: 100%;
      position:fixed;
 }
-<<<<<<< HEAD
 #search-contant{
   overflow-y: auto;
 }
@@ -146,10 +137,10 @@
     margin-left:450px;
     border-radius:10px;
 }
-=======
->>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
 </style>
   <body onload="callAfterTenSeconds()">
+   <section id="homesection">
+
     <div class="container-fluid" style="background-color:rgb(255, 255, 255);">
       <nav class="navbar navbar-expand-lg" style="height: 80px;background-color:rgb(255, 255, 255);position: fixed;z-index:1000;margin-left: -13px;width: 1535px;">
           <div class="container-fluid">
@@ -167,17 +158,10 @@
                   <a  class="nav-link" href="#Ai-chat" style="color: rgb(0, 0, 0); font-size: 20px;margin-left:30px;">Ai-chat</a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
                   <a class="nav-link" href="#contact" style="color: rgb(0, 0, 0);font-size: 20px;margin-left: 30px;">Contact us</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#footer" style="color: rgb(0, 0, 0);font-size: 20px;margin-left: 30px;">About</a>
-=======
-                  <a class="nav-link" href="#footer" style="color: rgb(0, 0, 0);font-size: 20px;margin-left: 30px;">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contact" style="color: rgb(0, 0, 0);font-size: 20px;margin-left: 30px;">Contact us</a>
->>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#homepage"><button style="font-size:20px;color: rgb(0, 0, 0); margin-left:40px;background-color: transparent;border: transparent;" onclick="signdown()" id="loginbutton">Login</button></a>
@@ -199,14 +183,12 @@
             <div class="typing-animation" id="typing-animation" style="color: white;margin-left:550px;margin-top:-140px;"></div>
           </div>
 
+          <section id="loginsection">
           <img src="download.png" style="margin-top: 200px;margin-left:1050px;height: 500px;"/>
-<<<<<<< HEAD
           <div class="container" id="login" style="height: 400px;width:500px;border: 2px solid whitesmoke;border-radius: 20px;margin-left:35%;position: absolute;">
-=======
-          <div class="container" id="login" style="height: 400px;width:500px;border: 1px solid whitesmoke;border-radius: 20px;margin-left:35%;position: absolute;">
->>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
             <button type="button" id="closefixed" onclick="closesign()" style="margin-left: 440px;border: transparent;background-color: transparent;border-radius: 10px;"><img src="images.png" style="height: 20px;width: 25px;border-radius: 40px;"/> </button>
             <span style="color: rgb(255, 255, 255);font-size: 30px;margin-left: 200px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;border: transparent;">Login</span>
+
             <form action="" method="post" onsubmit="return submitform()">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label" style="color: whitesmoke;margin-top: 40px;">Email address</label>
@@ -216,20 +198,18 @@
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label" style="color: whitesmoke;">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password..">
-                <spa style="color: rgb(255, 0, 0);" id="corpassword"></span>
+                <span style="color: rgb(255, 0, 0);" id="corpassword"></span>
               </div>
               <button type="submit" class="btn btn-primary" style="margin-left: 200px; margin-top: 10px;">Submit</button>
               <br/>
               <br/>
             </form>
             <span style="margin-left: 130px;margin-top:0px;color: whitesmoke;">Dont have an account ?<button onclick="signUppage()" style="background: transparent;border: transparent;color: rgb(255, 255, 255);">signUp</button></span>
-<<<<<<< HEAD
           </div>
+            </section>
+
+          <section id="signupsection">
            <div class="container" id="signup" style="height: 500px;width:500px;border: 2px solid whitesmoke;border-radius: 20px;position: absolute;background-color: rgb(0, 8, 67)">
-=======
-          </div> 
-           <div class="container" id="signup" style="height: 500px;width:500px;border: 1px solid whitesmoke;border-radius: 20px;position: absolute;background-color: rgb(0, 8, 67)">
->>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
             <button type="button" id="closefixedsign"  onclick="closesign2()" style="margin-left: 440px;border: transparent;background-color: transparent;border-radius: 10px;"><img src="images.png" style="height: 20px;width: 25px;border-radius: 40px;"/> </button>
             <form action="" method="post"  onsubmit="return signform()">
               <h2 style="color: white;margin-left: 200px;margin-top: 10px;">Sign Up</h2>
@@ -260,62 +240,32 @@
           </form>
           <span style="margin-left: 130px;margin-top:0px;color: whitesmoke;">Do have an account ?<button onclick="signdown()" style="background: transparent;border: transparent;color: rgb(255, 255, 255);">Login</button></span>
            </div>
-<<<<<<< HEAD
         </div>
+        </section>
+   </section>
+       <section id="Ai-chatsection">
         <div class="Ai-Chat" id="Ai-chat">
             <h1 style="margin-top:100px;color:white">AI chat</h1>
-            <div class="startchatbox" style="border: 1px solid whitesmoke;">
-              <div id="search-contant" style="height: 430px;width: 1355px;border: 1px solid whitesmoke;margin-left: 20px;margin-top: 15px;">
-                  <p style="font-size: 30px;color: white;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, obcaecati! Magnam atque eius ex sint. Asperiores incidunt mollitia, quae voluptate distinctio accusantium? Culpa aliquam nemo illum quo cumque non sed?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestias voluptates atque sequi natus rerum ut libero laborum ullam quam amet, saepe enim repellat fugit doloribus beatae animi quis neque Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo non architecto quisquam dolor magnam tenetur. Dolore ad eos obcaecati vel ipsum reprehenderit laboriosam cum maxime numquam suscipit, culpa explicabo magnam Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, ullam possimus! Aut accusantium sapiente, numquam hic debitis minima nemo, qui officiis cumque exercitationem iusto amet dolore pariatur ea doloribus saepe
 
-                  </p>
+            <div class="startchatbox" style="border: 1px solid whitesmoke;">
+              <section id="searchcontainsection">
+              <div id="search-contant" style="height: 430px;width: 1355px;color:white;border: 1px solid whitesmoke;margin-left: 20px;margin-top: 15px;">
+
               </div>
+                </section>
+              <section id="searchboxsection">
                 <div class="searchboxAi">
                   <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="" aria-label="Search" style="width: 800px;height:50px;margin-top: 7px;border-radius: 50px;color: white;background-color: transparent;border: 2px solid whitesmoke;margin-left: 5px;">
                     <button class="btn btn-outline-success" type="submit" style="width: 100px;height:50px;margin-left: 10px;margin-top: 10px;color: whitesmoke;background-color: rgb(181, 21, 181);border: 1px solid rgb(0, 0, 0);border-radius: 50px;">Search</button>
                   </form>
                 </div>
+                </section>
             </div>
         </div>
-        <div class="about" id="contact" style="background-color: rgb(13, 108, 111);">
-          <h1 style="margin-top: 100px;text-align: center;">Contact us</h1>
-          <div class="contactus" style="background-color: rgb(0, 136, 138);">
-            <form action="" method="post">
+         </section>
 
-              <label for="name " style="margin-top: 40px;margin-left: 100px;font-size: 25px;">Name:</label><br>
-
-              <input type="text" id="name" name="name" placeholder="enter name" style="margin-left: 95px;height: 45px;border-radius:5px;width: 500px;" required><br>
-
-              <label for="email" style="margin-top: 40px;margin-left: 100px;font-size: 25px;">Email:</label><br>
-
-              <input type="email" id="email" name="email"  placeholder="enter email" style="margin-left: 95px;height: 45px;border-radius:5px;width: 500px;" required><br>
-
-              <label for="message" style="margin-top: 40px;margin-left: 100px;font-size: 25px;">Message:</label><br>
-
-              <textarea id="message" placeholder="enter email" style="margin-left: 95px;height: 45px;border-radius:5px;width: 500px;" name="message" rows="5" cols="30" required></textarea><br>
-
-              <input type="submit" style="margin-top: 40px;margin-left: 100px;font-size: 25px;" value="Submit">
-
-            </form>
-          </div>
-=======
-        </div> 
-        <div class="Ai-Chat" id="Ai-chat">
-            <h1 style="margin-top:100px;color:white">AI chat</h1>
-            <div class="startchatbox" style="border: 1px solid whitesmoke;">
-                <div class="searchboxAi">
-                  <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="" aria-label="Search" style="width: 800px;height:50px;margin-top: 7px;border-radius: 50px;color: white;background-color: transparent;border: 2px solid whitesmoke;margin-left: 5px;">
-                    <button class="btn btn-outline-success" type="submit" style="width: 100px;height:50px;margin-left: 10px;margin-top: 10px;color: whitesmoke;background-color: rgb(181, 21, 181);border: 1px solid rgb(0, 0, 0);border-radius: 50px;">Search</button>
-                  </form>
-                </div>
-            </div>
-        </div>
-        <div class="about" id="contact" style="background-color: rgb(13, 108, 111);">
-          <h1 style="margin-top: 100px;text-align: center;">Contact us</h1>
->>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
-        </div>
+         <section id="footersection">
         <div class="footer" id="footer">
           <footer class="section1">
              <h3 style="color: whitesmoke;text-align: center;margin-top:-10px;margin-left:0px;">Developed By AD Coder</h3>
@@ -325,11 +275,7 @@
               <span style="color: whitesmoke;margin-left:8px;">Aakansha Marathe</span><br/>
               <span style="color: whitesmoke;margin-left:8px;">Muskan Rathore</span><br/>
               <span style="color: whitesmoke;margin-left:8px;">Prashant chohan</span><br/>
-<<<<<<< HEAD
              <div class="follow">
-=======
-             <div class="follow"> 
->>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
                  <img src="" />
                  <img src="" />
                  <img src=""/>
@@ -348,11 +294,7 @@
             <h3 style="color: whitesmoke;margin-top: -7px;margin-left: -40px;">About</h3>
              <span style="color: whitesmoke;margin-left: -35px;">Lorem ipsum dolor, sit amet consectetur</span>
              <span style="color: whitesmoke;margin-left:px;">Lorem ipsum dolor, sit amet consectetur</span>
-<<<<<<< HEAD
 
-=======
-             
->>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
           </footer>
           <footer class="section4">
               <h3 style="color: whitesmoke;margin-top: -7px;">contact us</h3>
@@ -362,6 +304,7 @@
           </footer>
         </div>
       </div>
+         </section>
         <script>
            function closesign(){
                 var close = document.getElementById("login");
@@ -444,7 +387,7 @@
             return true;
            }
           }
-           
+
           document.addEventListener('DOMContentLoaded', function() {
     const taglines = [
         "Your first tagline here",
@@ -452,16 +395,6 @@
         "Your third tagline here"
     ];
 
-<<<<<<< HEAD
-          document.addEventListener('DOMContentLoaded', function() {
-    const taglines = [
-        "Your first tagline here",
-        "Your second tagline here",
-        "Your third tagline here"
-    ];
-
-=======
->>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
     const typingElement = document.getElementById('typing-animation');
 
     function typeTaglines() {
@@ -484,11 +417,7 @@
     }
     typeTaglines();
 });
-<<<<<<< HEAD
 
-=======
-         
->>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
       let loginbtn = document.getElementById("loginbutton");
       loginbtn.addEventListener('click',function(){
        document.body.classList.add('open');
@@ -506,11 +435,7 @@
         var down = document.getElementById("login");
         down.style.top = "20%";
         document.body.classList.add('open');
-<<<<<<< HEAD
 
-=======
-       
->>>>>>> 9ad82998566c5715d964a73f449ed66914166bff
     }, 10000); // 10000 milliseconds = 10 seconds
 }
         </script>

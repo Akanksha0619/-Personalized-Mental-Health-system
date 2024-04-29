@@ -191,4 +191,9 @@ def login_user(request):
             return redirect('login')
 
     return render(request, 'login_page.html')
+from django.shortcuts import render
+from .models import SearchHistory
 
+def search_history_view(request):
+    search_history = SearchHistory.objects.all()
+    return render(request, 'search_history.html', {'search_history': search_history})
